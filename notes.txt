@@ -1,0 +1,9 @@
+To compile verilog code:
+iverilog -o "buffer_tb.vvp" buffer_tb.v
+
+To run simulation:
+vvp buffer_tb.vvp
+
+To display waveform with gtkwave:
+gtkwave buffer_tb.vcd
+
