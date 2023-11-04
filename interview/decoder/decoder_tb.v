@@ -14,23 +14,27 @@ module decoder_tb;
         .Y(out)
     );
 
+    task test_case(
+        input [3:0] inbits);
+        begin
+            in = inbits;
+            sel = 2'b11;
+            repeat(4) #2 sel = sel - 1;            
+        end
+    endtask
+
     initial begin
         $dumpfile("decoder_tb.vcd");
         $dumpvars(0, decoder_tb);
 
         #1;
 
-        in = 4'b1010;
-        sel = 2'b11;
-        repeat(4) #2 sel = sel - 1;
+        test_case(4'b1010);
+        test_case(4'b0011);
+        test_case(4'b0110);
+        #5;
 
-        in = 4'b0011;
-        sel = 2'b11;
-        repeat(4) #2 sel = sel - 1;
-
-        in = 4'b1000;
-        sel = 2'b11;
-        repeat(4) #2 sel = sel - 1; 
+        $finish;
     end
     
 endmodule
