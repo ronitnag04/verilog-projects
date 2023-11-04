@@ -5,7 +5,7 @@ module counter #(parameter W = 4) (
     input clk, reset, ce, le
 );
 
-    always @(posedge clk) begin
+    always @(posedge clk, reset) begin
         if (reset) count <= {W{1'b0}};
         else if (le) count <= load;
         else if (ce) count <= count + 1;

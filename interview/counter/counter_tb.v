@@ -29,6 +29,7 @@ module counter_tb;
         $dumpvars(0, counter_tb);
 
         @(posedge clk);
+        #0.4;
 
         reset = 1'b1;
         repeat (3) @(posedge clk);
