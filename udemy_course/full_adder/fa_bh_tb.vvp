@@ -1,0 +1,89 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002618842bb70 .scope module, "fa_bh_tb" "fa_bh_tb" 2 4;
+ .timescale -9 -9;
+v00000261883420e0_0 .var "a", 0 0;
+v0000026188342680_0 .var "b", 0 0;
+v0000026188342400_0 .var "c_in", 0 0;
+v0000026188342040_0 .net "c_out", 0 0, L_0000026188342720;  1 drivers
+v0000026188342860_0 .net "s", 0 0, L_0000026188341e60;  1 drivers
+S_0000026188346340 .scope module, "dut" "fa_bh" 2 8, 3 1 0, S_000002618842bb70;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /OUTPUT 1 "c_out";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+    .port_info 4 /INPUT 1 "c_in";
+L_0000026188346750 .functor XNOR 1, v00000261883420e0_0, v0000026188342680_0, C4<0>, C4<0>;
+v000002618842bf10_0 .net *"_ivl_12", 1 0, L_0000026188341fa0;  1 drivers
+v00000261883464d0_0 .net *"_ivl_13", 0 0, L_0000026188346750;  1 drivers
+L_00000261883918b8 .functor BUFT 1, C4<000>, C4<0>, C4<0>, C4<0>;
+v0000026188346570_0 .net *"_ivl_18", 2 0, L_00000261883918b8;  1 drivers
+v0000026188346610_0 .net *"_ivl_3", 2 0, L_0000026188342900;  1 drivers
+L_0000026188391828 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000261883466b0_0 .net *"_ivl_6", 1 0, L_0000026188391828;  1 drivers
+L_0000026188391870 .functor BUFT 1, C4<101>, C4<0>, C4<0>, C4<0>;
+v0000026188336e80_0 .net/2u *"_ivl_7", 2 0, L_0000026188391870;  1 drivers
+v0000026188336f20_0 .net *"_ivl_9", 2 0, L_0000026188341f00;  1 drivers
+v0000026188336fc0_0 .net "a", 0 0, v00000261883420e0_0;  1 drivers
+v0000026188337060_0 .net "b", 0 0, v0000026188342680_0;  1 drivers
+v0000026188342ae0_0 .net "c_in", 0 0, v0000026188342400_0;  1 drivers
+v0000026188341dc0_0 .net "c_out", 0 0, L_0000026188342720;  alias, 1 drivers
+v0000026188342540_0 .net "s", 0 0, L_0000026188341e60;  alias, 1 drivers
+v00000261883425e0_0 .net "test", 3 0, L_0000026188341c80;  1 drivers
+L_0000026188342720 .part L_0000026188341fa0, 1, 1;
+L_0000026188341e60 .part L_0000026188341fa0, 0, 1;
+L_0000026188342900 .concat [ 1 2 0 0], v0000026188342680_0, L_0000026188391828;
+L_0000026188341f00 .arith/div 3, L_0000026188342900, L_0000026188391870;
+L_0000026188341fa0 .part L_0000026188341f00, 0, 2;
+L_0000026188341c80 .concat [ 1 3 0 0], L_0000026188346750, L_00000261883918b8;
+    .scope S_000002618842bb70;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "fa_bh_tb.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002618842bb70 {0 0 0};
+    %vpi_call 2 20 "$monitor", "time=%d \011 a=%b \011 b=%b \011 c_in=%b \011 s=%b \011 c_out=%b", $time, v00000261883420e0_0, v0000026188342680_0, v0000026188342400_0, v0000026188342860_0, v0000026188342040_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261883420e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342680_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026188342400_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000261883420e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342680_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342400_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261883420e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342680_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342400_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000261883420e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026188342680_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026188342400_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 44 "$display", "Test Complete!" {0 0 0};
+    %vpi_call 2 45 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fa_bh_tb.v";
+    "./fa_bh.v";

@@ -1,0 +1,42 @@
+$date
+	Mon Oct 30 20:31:01 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module logical_operators_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$scope module dut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 4 $ out [3:0] $end
+$var reg 4 % x [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+bx $
+0#
+1"
+bx !
+$end
+#1
+b1111 !
+b1111 $
+b1111 %
+#20
+1#
+#40
+0#
+0"
+#18745051

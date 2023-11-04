@@ -1,0 +1,58 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000020fb396a260 .scope module, "logical_operators_tb" "logical_operators_tb" 2 4;
+ .timescale -12 -12;
+v0000020fb396a3f0_0 .var "a", 0 0;
+v0000020fb396a490_0 .var "b", 0 0;
+v0000020fb39b6490_0 .net "out", 3 0, L_0000020fb3969030;  1 drivers
+S_0000020fb39b6300 .scope module, "dut" "logical_operators" 2 8, 3 1 0, S_0000020fb396a260;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 4 "out";
+L_0000020fb3969030 .functor BUFZ 4, v0000020fb3969150_0, C4<0000>, C4<0000>, C4<0000>;
+v0000020fb3983150_0 .net "a", 0 0, v0000020fb396a3f0_0;  1 drivers
+v0000020fb3983370_0 .net "b", 0 0, v0000020fb396a490_0;  1 drivers
+v0000020fb3982ed0_0 .net "out", 3 0, L_0000020fb3969030;  alias, 1 drivers
+v0000020fb3969150_0 .var "x", 3 0;
+    .scope S_0000020fb39b6300;
+T_0 ;
+    %delay 1, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000020fb3969150_0, 0, 4;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000020fb396a260;
+T_1 ;
+    %vpi_call 2 15 "$dumpfile", "logical_operators_tb.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000020fb396a260 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020fb396a3f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020fb396a490_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020fb396a3f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000020fb396a490_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020fb396a3f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000020fb396a490_0, 0, 1;
+    %delay 20, 0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "logical_operators_tb.v";
+    "./logical_operators.v";

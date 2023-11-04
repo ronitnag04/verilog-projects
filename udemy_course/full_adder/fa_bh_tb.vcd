@@ -1,0 +1,49 @@
+$date
+	Sun Oct 29 20:20:12 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module fa_bh_tb $end
+$var wire 1 ! s $end
+$var wire 1 " c_out $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % c_in $end
+$scope module dut $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % c_in $end
+$var wire 4 & test [3:0] $end
+$var wire 1 ! s $end
+$var wire 1 " c_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 &
+0%
+1$
+1#
+0"
+0!
+$end
+#20
+b0 &
+1%
+0#
+#40
+b1 &
+1#
+#60
+b0 &
+0%
+0#
+#80
