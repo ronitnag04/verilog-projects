@@ -1,0 +1,80 @@
+$date
+	Fri Nov 03 22:44:15 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module comparator_tb $end
+$var wire 1 ! l $end
+$var wire 1 " g $end
+$var wire 1 # e $end
+$var parameter 32 $ W $end
+$var reg 8 % a [7:0] $end
+$var reg 8 & b [7:0] $end
+$scope module dut $end
+$var wire 8 ' a [7:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 1 # e $end
+$var wire 1 " g $end
+$var wire 1 ! l $end
+$var parameter 32 ) W $end
+$var reg 1 * er $end
+$var reg 1 + gr $end
+$var reg 1 , lr $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 )
+b1000 $
+$end
+#0
+$dumpvars
+1,
+0+
+0*
+b1010 (
+b101 '
+b1010 &
+b101 %
+0#
+0"
+1!
+$end
+#2
+0!
+0,
+1#
+1*
+b101 &
+b101 (
+#4
+0#
+0*
+1"
+1+
+b10 &
+b10 (
+#6
+1#
+1*
+0"
+0+
+b11 &
+b11 (
+b11 %
+b11 '
+#8
+1!
+1,
+0#
+0*
+b110 &
+b110 (
+b1 %
+b1 '
+#10
