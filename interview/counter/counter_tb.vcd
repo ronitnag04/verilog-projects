@@ -1,0 +1,141 @@
+$date
+	Fri Nov 03 20:48:16 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module counter_tb $end
+$var wire 8 ! count [7:0] $end
+$var reg 1 " ce $end
+$var reg 1 # clk $end
+$var reg 1 $ le $end
+$var reg 8 % load [7:0] $end
+$var reg 1 & reset $end
+$scope module dut $end
+$var wire 1 " ce $end
+$var wire 1 # clk $end
+$var wire 1 $ le $end
+$var wire 8 ' load [7:0] $end
+$var wire 1 & reset $end
+$var parameter 32 ( W $end
+$var reg 8 ) count [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 (
+$end
+#0
+$dumpvars
+bx )
+b11111111 '
+0&
+b11111111 %
+0$
+0#
+0"
+bx !
+$end
+#1250
+b0 !
+b0 )
+1&
+1#
+#2500
+0#
+#3750
+1#
+#5000
+0#
+#6250
+1#
+#7500
+0#
+#8750
+0&
+1#
+#10000
+1$
+b1101 %
+b1101 '
+0#
+#11250
+b1101 !
+b1101 )
+1#
+#12500
+b10 %
+b10 '
+0$
+0#
+#13750
+1#
+#15000
+0#
+#16250
+1#
+#17500
+1"
+0#
+#18750
+b1110 !
+b1110 )
+1#
+#20000
+0#
+#21250
+b1111 !
+b1111 )
+1#
+#22500
+0#
+#23750
+b10000 !
+b10000 )
+1#
+#25000
+0#
+#26250
+b10001 !
+b10001 )
+1#
+#27500
+0#
+#28750
+b10010 !
+b10010 )
+1#
+#30000
+0#
+#31250
+b10011 !
+b10011 )
+1#
+#32500
+0#
+#33750
+b10100 !
+b10100 )
+1#
+#35000
+0#
+#36250
+b10101 !
+b10101 )
+1#
+#37500
+0#
+#38750
+b10110 !
+b10110 )
+1#
+#40000
+0#
+#41250
+b10111 !
+b10111 )
+1#
