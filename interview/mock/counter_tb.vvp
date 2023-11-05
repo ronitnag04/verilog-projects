@@ -115,21 +115,29 @@ T_4.0 %dup/vec4;
 T_4.1 ;
     %pop/vec4 1;
     %pushi/vec4 1, 0, 1;
+<<<<<<< HEAD
     %assign/vec4 v00000190c7fa2c90_0, 0;
+=======
+    %assign/vec4 v000001effda710b0_0, 0;
     %pushi/vec4 5, 0, 32;
-T_4.2 %dup/vec4;
-    %pushi/vec4 0, 0, 32;
-    %cmp/s;
     %jmp/1xz T_4.3, 5;
     %jmp/1 T_4.3, 4;
     %pushi/vec4 1, 0, 32;
     %sub;
+<<<<<<< HEAD
     %wait E_00000190c7fc52f0;
+=======
+    %wait E_000001effda17250;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %jmp T_4.2;
 T_4.3 ;
     %pop/vec4 1;
     %pushi/vec4 0, 0, 1;
+<<<<<<< HEAD
     %assign/vec4 v00000190c7fa2c90_0, 0;
+=======
+    %assign/vec4 v000001effda710b0_0, 0;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %pushi/vec4 3, 0, 32;
 T_4.4 %dup/vec4;
     %pushi/vec4 0, 0, 32;
@@ -138,6 +146,7 @@ T_4.4 %dup/vec4;
     %jmp/1 T_4.5, 4;
     %pushi/vec4 1, 0, 32;
     %sub;
+<<<<<<< HEAD
     %wait E_00000190c7fc52f0;
     %jmp T_4.4;
 T_4.5 ;
@@ -145,6 +154,15 @@ T_4.5 ;
     %wait E_00000190c7fc52f0;
     %pushi/vec4 1, 0, 1;
     %assign/vec4 v00000190c7fa2c90_0, 0;
+=======
+    %wait E_000001effda17250;
+    %jmp T_4.4;
+T_4.5 ;
+    %pop/vec4 1;
+    %wait E_000001effda17250;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000001effda710b0_0, 0;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %pushi/vec4 20, 0, 32;
 T_4.6 %dup/vec4;
     %pushi/vec4 0, 0, 32;
@@ -153,12 +171,20 @@ T_4.6 %dup/vec4;
     %jmp/1 T_4.7, 4;
     %pushi/vec4 1, 0, 32;
     %sub;
+<<<<<<< HEAD
     %wait E_00000190c7fc52f0;
+=======
+    %wait E_000001effda17250;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %jmp T_4.6;
 T_4.7 ;
     %pop/vec4 1;
     %pushi/vec4 0, 0, 1;
+<<<<<<< HEAD
     %assign/vec4 v00000190c801f4c0_0, 0;
+=======
+    %assign/vec4 v000001effda711f0_0, 0;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %pushi/vec4 20, 0, 32;
 T_4.8 %dup/vec4;
     %pushi/vec4 0, 0, 32;
@@ -167,17 +193,30 @@ T_4.8 %dup/vec4;
     %jmp/1 T_4.9, 4;
     %pushi/vec4 1, 0, 32;
     %sub;
+<<<<<<< HEAD
     %wait E_00000190c7fc52f0;
+=======
+    %wait E_000001effda17250;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %jmp T_4.8;
 T_4.9 ;
     %pop/vec4 1;
     %pushi/vec4 1, 0, 1;
+<<<<<<< HEAD
     %assign/vec4 v00000190c7fa2d30_0, 0;
     %wait E_00000190c7fc52f0;
     %pushi/vec4 0, 0, 1;
     %assign/vec4 v00000190c7fa2d30_0, 0;
     %pushi/vec4 0, 0, 1;
     %assign/vec4 v00000190c7fa2c90_0, 0;
+=======
+    %assign/vec4 v000001effda71150_0, 0;
+    %wait E_000001effda17250;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001effda71150_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001effda710b0_0, 0;
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %pushi/vec4 2, 0, 32;
 T_4.10 %dup/vec4;
     %pushi/vec4 0, 0, 32;
@@ -186,11 +225,19 @@ T_4.10 %dup/vec4;
     %jmp/1 T_4.11, 4;
     %pushi/vec4 1, 0, 32;
     %sub;
+<<<<<<< HEAD
     %wait E_00000190c7fc52f0;
     %jmp T_4.10;
 T_4.11 ;
     %pop/vec4 1;
     %vpi_call 2 52 "$finish" {0 0 0};
+=======
+    %wait E_000001effda17250;
+    %jmp T_4.10;
+T_4.11 ;
+    %pop/vec4 1;
+    %vpi_call 2 48 "$finish" {0 0 0};
+>>>>>>> cebac1774cc8c1c353f666c87ebf4659578423a3
     %end;
     .thread T_4;
 # The file index is used to find the file name in the following table.
