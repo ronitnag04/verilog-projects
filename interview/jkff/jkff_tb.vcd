@@ -1,0 +1,126 @@
+$date
+	Sat Nov 04 20:32:24 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module jkff_tb $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # clr $end
+$var reg 1 $ j $end
+$var reg 1 % k $end
+$var reg 1 & pre $end
+$scope task test $end
+$var reg 1 ' clri $end
+$var reg 1 ( ji $end
+$var reg 1 ) ki $end
+$var reg 1 * prei $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x*
+x)
+x(
+x'
+1&
+x%
+x$
+1#
+0"
+1!
+$end
+#1
+1"
+#2
+0!
+0&
+0%
+1$
+1'
+0*
+0)
+1(
+0"
+#3
+1"
+#4
+0#
+0$
+0'
+0(
+0"
+#5
+1"
+#6
+1$
+1(
+0"
+#7
+1!
+1"
+#8
+0$
+0(
+0"
+#9
+1"
+#10
+0"
+#11
+1"
+#12
+1%
+1)
+0"
+#13
+0!
+1"
+#14
+0%
+0)
+0"
+#15
+1"
+#16
+0"
+#17
+1"
+#18
+1%
+1$
+1)
+1(
+0"
+#19
+1!
+1"
+#20
+0"
+#21
+0!
+1"
+#22
+0"
+#23
+1!
+1"
+#24
+0$
+0(
+0"
+#25
+0!
+1"
+#26
+0%
+0)
+0"
