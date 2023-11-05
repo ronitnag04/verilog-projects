@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+`timescale 1ns/1ps
 `include "uart_transmitter.v"
 
 module uart_transmitter_tb;
@@ -21,10 +21,13 @@ module uart_transmitter_tb;
     initial begin
         $dumpfile("uart_transmitter_tb.vcd");
         $dumpvars(0, uart_transmitter_tb);
+        $monitor("Time:%t | tx: %b", $time, tx);
 
         clk = 0;
         rst = 0;
         load = 0;
+
+        
 
         @(posedge clk);
         rst <= 1;
