@@ -1,0 +1,44 @@
+$date
+	Sat Nov 04 19:26:48 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module nand4gate_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 4 # B [3:0] $end
+$scope module dut $end
+$var wire 4 $ A [3:0] $end
+$var wire 4 % B [3:0] $end
+$var wire 4 & Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111 &
+b0 %
+b0 $
+b0 #
+b0 "
+b1111 !
+$end
+#2
+b101 !
+b101 &
+b1111 #
+b1111 %
+b1010 "
+b1010 $
+#4
+b1111 !
+b1111 &
+b0 #
+b0 %

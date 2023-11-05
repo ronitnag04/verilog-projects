@@ -1,0 +1,92 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002852c94d100 .scope module, "nand4gate_tb" "nand4gate_tb" 2 4;
+ .timescale -12 -12;
+v000002852c987720_0 .var "A", 3 0;
+v000002852c987860_0 .var "B", 3 0;
+v000002852c9879a0_0 .net "Y", 3 0, L_000002852c992e00;  1 drivers
+S_000002852c94d290 .scope module, "dut" "nand4gate" 2 9, 3 15 0, S_000002852c94d100;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 4 "Y";
+UDP_nandgate .udp/comb "nandgate", 3
+ ,"??00"
+ ,"0011"
+ ,"1011"
+ ,"0111"
+ ,"1110";
+L_000002852c9e8858 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_000002852c995440 .udp UDP_nandgate, L_000002852c993300, L_000002852c993260, L_000002852c9e8858;
+L_000002852c9e88a0 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_000002852c986f40 .udp UDP_nandgate, L_000002852c992360, L_000002852c9933a0, L_000002852c9e88a0;
+L_000002852c9e88e8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_000002852c9855c0 .udp UDP_nandgate, L_000002852c993620, L_000002852c992900, L_000002852c9e88e8;
+L_000002852c9e8930 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_000002852c984e20 .udp UDP_nandgate, L_000002852c993b20, L_000002852c9931c0, L_000002852c9e8930;
+v000002852c987b80_0 .net "A", 3 0, v000002852c987720_0;  1 drivers
+v000002852c987c20_0 .net "B", 3 0, v000002852c987860_0;  1 drivers
+v000002852c987220_0 .net "Y", 3 0, L_000002852c992e00;  alias, 1 drivers
+v000002852c987cc0_0 .net *"_ivl_0", 0 0, L_000002852c995440;  1 drivers
+v000002852c987d60_0 .net *"_ivl_11", 0 0, L_000002852c992360;  1 drivers
+v000002852c987900_0 .net *"_ivl_13", 0 0, L_000002852c9933a0;  1 drivers
+v000002852c987ea0_0 .net/2u *"_ivl_14", 0 0, L_000002852c9e88a0;  1 drivers
+v000002852c987a40_0 .net *"_ivl_16", 0 0, L_000002852c9855c0;  1 drivers
+v000002852c987fe0_0 .net *"_ivl_19", 0 0, L_000002852c993620;  1 drivers
+v000002852c987e00_0 .net *"_ivl_21", 0 0, L_000002852c992900;  1 drivers
+v000002852c987f40_0 .net/2u *"_ivl_22", 0 0, L_000002852c9e88e8;  1 drivers
+v000002852c987540_0 .net *"_ivl_24", 0 0, L_000002852c984e20;  1 drivers
+v000002852c9874a0_0 .net *"_ivl_28", 0 0, L_000002852c993b20;  1 drivers
+v000002852c9870e0_0 .net *"_ivl_3", 0 0, L_000002852c993300;  1 drivers
+v000002852c987180_0 .net *"_ivl_30", 0 0, L_000002852c9931c0;  1 drivers
+v000002852c9872c0_0 .net/2u *"_ivl_31", 0 0, L_000002852c9e8930;  1 drivers
+v000002852c987400_0 .net *"_ivl_5", 0 0, L_000002852c993260;  1 drivers
+v000002852c9875e0_0 .net/2u *"_ivl_6", 0 0, L_000002852c9e8858;  1 drivers
+v000002852c987680_0 .net *"_ivl_8", 0 0, L_000002852c986f40;  1 drivers
+L_000002852c993300 .part v000002852c987720_0, 0, 1;
+L_000002852c993260 .part v000002852c987860_0, 0, 1;
+L_000002852c992360 .part v000002852c987720_0, 1, 1;
+L_000002852c9933a0 .part v000002852c987860_0, 1, 1;
+L_000002852c993620 .part v000002852c987720_0, 2, 1;
+L_000002852c992900 .part v000002852c987860_0, 2, 1;
+L_000002852c992e00 .concat8 [ 1 1 1 1], L_000002852c995440, L_000002852c986f40, L_000002852c9855c0, L_000002852c984e20;
+L_000002852c993b20 .part v000002852c987720_0, 3, 1;
+L_000002852c9931c0 .part v000002852c987860_0, 3, 1;
+    .scope S_000002852c94d100;
+T_0 ;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002852c987720_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002852c987860_0, 0, 4;
+    %end;
+    .thread T_0;
+    .scope S_000002852c94d100;
+T_1 ;
+    %vpi_call 2 12 "$dumpfile", "nand4gate_tb.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002852c94d100 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 10, 0, 4;
+    %assign/vec4 v000002852c987720_0, 0;
+    %pushi/vec4 15, 0, 4;
+    %assign/vec4 v000002852c987860_0, 0;
+    %delay 2, 0;
+    %pushi/vec4 10, 0, 4;
+    %assign/vec4 v000002852c987720_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v000002852c987860_0, 0;
+    %vpi_call 2 23 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nand4gate_tb.v";
+    "./nand4gate.v";
